@@ -7,7 +7,7 @@ body {
     color: white;
     background: rgb(245,90,206);
     background: linear-gradient(rgba(245,90,206,1) 0%, rgba(169,60,224,1) 100%);
-    /*background-repeat:repeat-x;*/
+    background-attachment: fixed;
 }
 
 .lineBreak{
