@@ -47,6 +47,7 @@ body {
     margin-bottom: 10px;
     padding: 12px;
     height: 28px;
+    transition: 0.2s;
 }
 
 .socialsLinks:hover {
