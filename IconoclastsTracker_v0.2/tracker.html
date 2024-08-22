@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iconoclasts Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script src="./materialchecker.js"></script>
+    <center><img src="./tracker_img/generic/game_logo_tracker.webp" id="logo"></center><br>
+    <div id="all">
+    <span id="materials"><img src="./tracker_img/materials/Improvium.webp" alt="Improvium"> <span id="improviumVal">0</span>/29</span>&nbsp;<button onclick="addImprovium(); checkMaterials();">+1</button><button onclick="removeImprovium(); checkMaterials();">-1</button>
+    <span id="materials"><img src="./tracker_img/materials/Technium.webp" alt="Technium"> <span id="techniumVal">0</span>/19</span>&nbsp;<button onclick="addTechnium(); checkMaterials();">+1</button><button onclick="removeTechnium(); checkMaterials();">-1</button>
+    <span id="materials"><img src="./tracker_img/materials/Metallium.webp" alt="Metallium"> <span id="metalliumVal">0</span>/16</span>&nbsp;<button onclick="addMetallium(); checkMaterials();">+1</button><button onclick="removeMetallium(); checkMaterials();">-1</button>
+    <span id="materials"><img src="./tracker_img/materials/IvoryOil.webp" alt="Ivory Oil"> <span id="ivoilVal">0</span>/11</span>&nbsp;<button onclick="addIvoil(); checkMaterials();">+1</button><button onclick="removeIvoil(); checkMaterials();">-1</button>
+    <br><br>
+    <div id="schematics-container">
+        <span>Obtained Schematics</span><br>
+        <input type="checkbox" id="Anger" name="Anger" onclick="checkMaterials()"><label>Anger</label>
+        <input type="checkbox" id="Anxiety" name="Anxiety" onclick="checkMaterials()"><label>Anxiety</label>
+        <input type="checkbox" id="Ascend" name="Ascend" onclick="checkMaterials()"><label>Ascend</label>
+        <input type="checkbox" id="Chemistry" name="Chemistry" onclick="checkMaterials()"><label>Chemistry</label>
+        <input type="checkbox" id="Coolant" name="Coolant" onclick="checkMaterials()"><label>Coolant</label>
+        <input type="checkbox" id="Dark" name="Dark" onclick="checkMaterials()"><label>Dark</label>
+        <input type="checkbox" id="Grass" name="Grass" onclick="checkMaterials()"><label>Grass</label>
+        <input type="checkbox" id="Insanity" name="Insanity" onclick="checkMaterials()"><label>Insanity</label>
+        <input type="checkbox" id="Parkour" name="Parkour" onclick="checkMaterials()"><label>Parkour</label>
+        <input type="checkbox" id="Penetration" name="Penetration" onclick="checkMaterials()"><label>Penetration</label>
+        <input type="checkbox" id="Sand" name="Sand" onclick="checkMaterials()"><label>Sand</label>
+        <input type="checkbox" id="Sea" name="Sea" onclick="checkMaterials()"><label>Sea</label>
+        <input type="checkbox" id="Secret" name="Secret" onclick="checkMaterials()"><label>Secret</label>
+        <input type="checkbox" id="Smog" name="Smog" onclick="checkMaterials()"><label>Smog</label>
+        <input type="checkbox" id="Wood" name="Wood" onclick="checkMaterials()"><label>Wood</label>
+    </div>
+    <div id="tweaks-container">
+        <br>
+        <span>Craftable Tweaks</span><br>
+        <img src="./tracker_img/tweaks/IronHeart_empty.webp" id="IronHeart">
+        <img src="./tracker_img/tweaks/ToolAssist_empty.webp" id="ToolAssist">
+        <img src="./tracker_img/tweaks/FleetFoot_empty.webp" id="FleetFoot">
+        <img src="./tracker_img/tweaks/Spindle_empty.webp" id="Spindle">
+        <img src="./tracker_img/tweaks/CooldownS_empty.webp" id="CooldownS">
+        <img src="./tracker_img/tweaks/CooldownB_empty.webp" id="CooldownB">
+        <img src="./tracker_img/tweaks/WaveyBeam_empty.webp" id="WaveyBeam">
+        <img src="./tracker_img/tweaks/ShockValue_empty.webp" id="ShockValue">
+        <img src="./tracker_img/tweaks/Breathless_empty.webp" id="Breathless">
+        <img src="./tracker_img/tweaks/Detonator_empty.webp" id="Detonator">
+        <img src="./tracker_img/tweaks/BlastRadius_empty.webp" id="BlastRadius">
+        <img src="./tracker_img/tweaks/Dodger_empty.webp" id="Dodger">
+        <img src="./tracker_img/tweaks/Meditation_empty.webp" id="Meditation">
+        <img src="./tracker_img/tweaks/Sleuth_empty.webp" id="Sleuth">
+        <img src="./tracker_img/tweaks/Featherweight_empty.webp" id="Featherweight">
+        <img src="./tracker_img/tweaks/Roulette_empty.webp" id="Roulette">
+    </div>
+    <script>
+        
+        var improviumAmount = parseInt(0)
+        var techniumAmount = parseInt(0)
+        var metalliumAmount = parseInt(0)
+        var ivoilAmount = parseInt(0)
+        var angerCheck = document.getElementById('Anger')
+        
+        
+
+function start(){
+    document.getElementById('improviumVal').innerHTML = improviumAmount;
+    document.getElementById('techniumVal').innerHTML = techniumAmount;
+    document.getElementById('metalliumVal').innerHTML = metalliumAmount;
+    document.getElementById('ivoilVal').innerHTML = ivoilAmount;
+}
+
+function addImprovium(){
+    if(improviumAmount < 29){
+        improviumAmount = improviumAmount + 1;
+    document.getElementById("improviumVal").innerHTML = improviumAmount
+
+    }
+}
+
+function removeImprovium(){
+    if(improviumAmount > 0 ){
+        improviumAmount = improviumAmount - 1;
+        document.getElementById("improviumVal").innerHTML = improviumAmount;
+    }
+}
+
+function addMetallium(){
+    if(metalliumAmount < 16){
+        metalliumAmount = metalliumAmount + 1;
+    document.getElementById("metalliumVal").innerHTML = metalliumAmount
+
+    }
+}
+
+function removeMetallium(){
+    if(metalliumAmount > 0 ){
+        metalliumAmount = metalliumAmount - 1;
+        document.getElementById("metalliumVal").innerHTML = metalliumAmount;
+    }
+}
+
+
+function addTechnium(){
+    if(techniumAmount < 19){
+        techniumAmount = techniumAmount + 1;
+    document.getElementById("techniumVal").innerHTML = techniumAmount
+
+    }
+}
+
+function removeTechnium(){
+    if(techniumAmount > 0 ){
+        techniumAmount = techniumAmount - 1;
+        document.getElementById("techniumVal").innerHTML = techniumAmount;
+    }
+}
+
+function addIvoil(){
+    if(ivoilAmount < 11){
+        ivoilAmount = ivoilAmount + 1;
+    document.getElementById("ivoilVal").innerHTML = ivoilAmount;
+
+    }
+}
+
+function removeIvoil(){
+    if(ivoilAmount > 0 ){
+        ivoilAmount = ivoilAmount - 1;
+        document.getElementById("ivoilVal").innerHTML = ivoilAmount;
+    }
+}
+
+    </script>
+</body>
+</html>
