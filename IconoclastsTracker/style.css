@@ -1,0 +1,23 @@
+@import url('https://fonts.cdnfonts.com/css/renogare');
+
+    body {
+        font-family: Renogare;
+        background-color: #AB2F00;
+    }
+
+    #logo {
+        width: 25%; 
+    }
+
+    #all {
+        margin: auto;
+        color: white;
+        background-color: black;
+        width: 55%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    #materials {
+        margin: auto;
+    }
